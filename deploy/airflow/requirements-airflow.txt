@@ -5,13 +5,13 @@
 # manipulation (see market_insights_dag.py) so only its runtime dependencies
 # are listed here.
 
-yfinance>=0.2.40
-httpx>=0.27
+yfinance>=1.8.0
+httpx>=0.28.1
 # Airflow 2.9.x requires SQLAlchemy < 2.0
-sqlalchemy>=1.4.36,<2.0
-pydantic==2.12.5
-pydantic-settings==2.13.1
-psycopg2-binary>=2.9
-pandas>=2.0
-numpy>=1.26
-python-dotenv>=1.0
+sqlalchemy>=2.1.8,<3.0
+pydantic==2.14.3
+pydantic-settings==2.16.2
+psycopg2-binary>=2.9.13
+pandas>=3.1.1
+numpy>=2.5.4
+python-dotenv>=1.2.4
