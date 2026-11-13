@@ -168,7 +168,8 @@ bash scripts/dev_up.sh
 ## Tests
 
 ```bash
-pytest -v   # 40 passed
+pip install -r requirements-dev.txt   # pytest et ruff, hors image de production
+pytest -v   # 48 passed
 ```
 
 Voir **ARCHITECTURE.md** pour les schémas et le détail technique.
@@ -445,6 +446,7 @@ Toutes les variables sont optionnelles. Le fichier `.env.example` fournit les va
 ## Tests
 
 ```bash
+pip install -r requirements-dev.txt
 pytest -v
 ```
 

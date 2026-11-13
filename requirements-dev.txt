@@ -1,0 +1,4 @@
+# Test and lint tools (CI, local development). Not installed in the production image.
+-r requirements.txt
+pytest==8.4.2
+ruff
