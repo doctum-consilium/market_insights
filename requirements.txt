@@ -2,29 +2,29 @@
 # Test and lint tools live in requirements-dev.txt.
 
 # ── Core ───────────────────────────────────────────────────────
-fastapi==0.162.0
+fastapi==0.162.2
 starlette==1.10.0  # tirée par FastAPI, épinglée : osv ne voit que ce qui est écrit ici (0.47.3 = 12 CVE)
-uvicorn[standard]==0.35.0
-pydantic==2.12.5
-pydantic-settings==2.14.2
-sqlalchemy==2.0.43
-pandas==3.0.1
-numpy==2.4.3
-python-dotenv==1.2.2
+uvicorn[standard]==0.54.0
+pydantic==2.14.3
+pydantic-settings==2.16.2
+sqlalchemy==2.1.8
+pandas==3.1.1
+numpy==2.5.4
+python-dotenv==1.2.4
 httpx==0.28.1
 # PostgreSQL driver (DATABASE_URL=postgresql://… in docker-compose.prod.yml)
-psycopg2-binary>=2.9
+psycopg2-binary>=2.9.13
 
 # ── Data providers ─────────────────────────────────────────────
-yfinance>=0.2.40
+yfinance>=1.8.0
 scikit-learn==1.9.1
 
 # ── RAG: embeddings (sentence-transformers or TF-IDF fallback) ─
 # Force PyTorch CPU wheels to avoid CUDA/GPU dependencies in Docker builds.
 --extra-index-url https://download.pytorch.org/whl/cpu
 torch==2.15.0+cpu; platform_system == "Linux" and platform_machine == "x86_64"
-sentence-transformers==5.7.0
+sentence-transformers==6.2.0
 
 # ── LLM clients (all optional, installed for availability) ─────
-openai>=1.30.0
-anthropic>=0.28.0
+openai>=3.49.0
+anthropic>=2.7.0
